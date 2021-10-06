@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, Text, View, Button } from "react-native";
+import { StyleSheet, ScrollView, Text, View, Button } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import ImagExample from "./img";
 import Imaglzy from "./usrimg";
@@ -14,12 +14,12 @@ return (
 				<ImagExample/>
 				<ImagExample/>
 			</ScrollView>
-			<Button	title="Go to Home"	color="#006600" onPress={() => props.navigation.navigate("Home")}/>
+			<Button	style = {styles.marketPlace} title="Go to Market Place" onPress={() => props.navigation.navigate("Home")}/>
 			<ScrollView horizontal={true}>
 				<Imaglzy/>
 				<Imaglzy/>
 			</ScrollView>
-			<Button	title="Go to Home"	color="#006600" onPress={() => props.navigation.navigate("Home")}/>
+			<Button	title="View Artists" color="#000000" onPress={() => props.navigation.navigate("Home")}/>
 			<ScrollView horizontal={true} style={{height: 200}}>
 				<ImagExe/>
 				<ImagExe/>
@@ -37,3 +37,10 @@ return (
 };
 
 export default Settings;
+
+const styles = StyleSheet.create({
+	marketPlace:{
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+	}
+})
